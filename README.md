@@ -1,1 +1,1 @@
-# decision-making-helper
+# Decision Making Helper
