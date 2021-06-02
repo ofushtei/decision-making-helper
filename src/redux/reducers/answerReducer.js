@@ -1,7 +1,7 @@
 import { SAVE_ANSWER } from '../actions/types'
 
 const initialState = {
-	answers: null,
+	answers: [],
 	error: null
 }
 

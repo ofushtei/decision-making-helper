@@ -23,7 +23,7 @@ const Quiz = ({ navigation, question: { questions }, getQuestions }) => {
 	}, [])
 
 	makeCancelable(timeout(time)).then(() => {
-		navigation.navigate('Home')
+		navigation.goBack()
 	})
 
 	function shuffle(array) {
@@ -48,31 +48,9 @@ const Quiz = ({ navigation, question: { questions }, getQuestions }) => {
 
 		return array
 	}
-	// console.log(questions)
 	shuffle(questions)
-	// console.log(questions)
 
 	return (
-		// <View style={styles.container}>
-		// 	<FlatList
-		// 		data={questions}
-		// 		renderItem={({ item }) => <QuizItem question={item} key={item.id} />}
-		// 		snapToAlignment={'start'}
-		// 		decelerationRate={'fast'}
-		// 		snapToInterval={Dimensions.get('window').height}
-		// 		showsVerticalScrollIndicator={false}
-		// 		showsHorizontalScrollIndicator={false}
-		// 		ListFooterComponent={
-		// 			<View style={styles.saveButton}>
-		// 				<Button
-		// 					onPress={() => navigation.goBack()}
-		// 					title="Save answers and go back"
-		// 				/>
-		// 			</View>
-		// 		}
-		// 	/>
-		// 	<StatusBar hidden />
-		// </View>
 		<PagerView style={styles.container} initialPage={0}>
 			<FlatList
 				data={questions}
