@@ -13,7 +13,7 @@ const Quiz = ({ navigation, question: { questions }, getQuestions }) => {
 	// 30000 - 30 sec
 	// 60000 - 1 min
 	// 120000 - 2 min
-	const time = 30000
+	const time = 120000
 
 	const makeCancelable = useCancelablePromise()
 
